@@ -1,0 +1,10 @@
+@import "../../../src/variables.scss";
+
+.side-navigation-container {
+  background-color: $main-color;
+  width: 300px;
+  height: 100%;
+  .playlists-container ul {
+    color: #fff;
+  }
+}
