@@ -6,3 +6,7 @@
   margin: 0px;
   height: 100%;
 }
+
+:host ::ng-deep .content-wrapper {
+  padding-left: 320px;
+}

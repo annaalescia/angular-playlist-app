@@ -1,9 +1,19 @@
 <div class="side-navigation-container">
   <div class="playlists-container">
-    <div class="user-profile-container"></div>
+    <a routerLink="/" class="navigate-home-link"><mat-icon>home</mat-icon></a>
+    <div class="user-profile-container" *ngIf="user">
+      <h3>{{ user.display_name }}</h3>
+    </div>
     <h3>Playlists</h3>
     <ul>
-      <li *ngFor="let playlist of playlists">{{ playlist.name }}</li>
+      <li *ngFor="let playlist of playlists">
+        <a
+          routerLink="/playlist/{{ playlist.id }}"
+          routerLinkActive="selected-playlist"
+          ><span>{{ playlist.name }}</span></a
+        >
+      </li>
     </ul>
+    <div>{{ selectedPlaylist }}</div>
   </div>
 </div>

@@ -10,17 +10,17 @@ const auth_token = environment.auth;
 @Injectable({
   providedIn: "root"
 })
-export class UserService {
+export class GenresService {
   constructor(private http: HttpClient) {}
 
-  public getUserProfile(): Observable<any> {
+  public getGenres(): Observable<any> {
     const headers = new HttpHeaders({
       "Content-Type": "application/json",
       Authorization: auth_token
     });
     return this.http
-      .get(`${API_URL}/me`, { headers: headers })
-      .pipe(tap(response => response));
+      .get(`${API_URL}/browse/categories`, { headers: headers })
+      .pipe(tap(response => response.categories.items));
   }
 
   // private handleError(error: Response | any) {
