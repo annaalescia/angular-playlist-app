@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { environment } from "../environments/environment";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { tap } from "rxjs/operators";
 
@@ -30,6 +30,20 @@ export class PlaylistService {
     });
     return this.http
       .get(`${API_URL}/playlists/${playlistId}/tracks`, { headers: headers })
+      .pipe(tap(response => console.log(response)));
+  }
+
+  public deleteTrack(playlistId, tracks): Observable<any> {
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      Authorization: auth_token
+    });
+
+    return this.http
+      .request("delete", `${API_URL}/playlists/${playlistId}/tracks`, {
+        body: JSON.stringify(tracks),
+        headers: headers
+      })
       .pipe(tap(response => console.log(response)));
   }
 

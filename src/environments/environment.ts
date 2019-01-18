@@ -7,7 +7,7 @@ export const environment = {
   // URL of production API
   apiUrl: "https://api.spotify.com/v1",
   auth:
-    "Bearer BQBh58AkO-QQu2Nbf2mJBlUJcJ5TWi0Y6Ybcl4Sviq5oM-d3ovLu8B5AYHArtI2Hb3B97iTCnefRyTp2XWuhkcsfniub5o9uCi1S6W3AtHUJLPC09_TJ8cqOx1i0ugSuEJ8Og7D4y5-fXVH8zUvmPSZynA3PxgEzF97zkjBPANkRkzfXaA"
+    "Bearer BQCBbKDRp8s4vQaX-NJz90Xv9cEt8Pj6EzyH0AHK9h6xAECsBLuiuydLAn8LIukjXCZdFbB5SV1mW9If5SWh1ZYfJcBqCup7s95A-_7l2NZw6p1kWiS3jhQAfkn_83FJTES05Wmceyw9PQWsRFw3cJVy9oqXVmfJA-RZQDFOqQNi94iFnA"
 };
 
 /*
