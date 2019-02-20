@@ -12,13 +12,23 @@ import { PlaylistComponent } from "./playlist/playlist.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SideNavComponent } from "./side-nav/side-nav.component";
 import { BrowseGenresComponent } from "./browse-genres/browse-genres.component";
+import {
+  GenreListComponent,
+  AddPlaylistModal
+} from "./genre-list/genre-list.component";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSelectModule } from "@angular/material/select";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
     PlaylistComponent,
     SideNavComponent,
-    BrowseGenresComponent
+    BrowseGenresComponent,
+    GenreListComponent,
+    AddPlaylistModal
   ],
   imports: [
     BrowserModule,
@@ -28,8 +38,13 @@ import { BrowseGenresComponent } from "./browse-genres/browse-genres.component";
     MatTableModule,
     MatGridListModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
   ],
+  entryComponents: [AddPlaylistModal],
   providers: [],
   bootstrap: [AppComponent]
 })

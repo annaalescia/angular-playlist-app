@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Select a Playlist to add {{ data.trackName }} to</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-select matInput placeholder="Playlists" [(value)]="selectedPlaylist">
+      <mat-option *ngFor="let playlist of playlists" [value]="playlist.id">{{
+        playlist.name
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button
+    mat-button
+    cdkFocusInitial
+    (click)="addTrack(data.trackURI, selectedPlaylist)"
+  >
+    Ok
+  </button>
+</div>

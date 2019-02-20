@@ -7,9 +7,8 @@ export const environment = {
   // URL of production API
   apiUrl: "https://api.spotify.com/v1",
   auth:
-    "Bearer BQCBbKDRp8s4vQaX-NJz90Xv9cEt8Pj6EzyH0AHK9h6xAECsBLuiuydLAn8LIukjXCZdFbB5SV1mW9If5SWh1ZYfJcBqCup7s95A-_7l2NZw6p1kWiS3jhQAfkn_83FJTES05Wmceyw9PQWsRFw3cJVy9oqXVmfJA-RZQDFOqQNi94iFnA"
+    "Bearer BQDdlKD6rVFCB4yeKb-lBEjwLsOfdDQ7GRnZu5answu8-Q2V1OGcgodYQXtKDRCbjjnqsC-dqni2a1hkQSI-th0WvxleT-l8tqMuPIuGjOhMu4Tb3igHiRu9QIspMv4XVOLhgIcbSSBh1X-4GKrrJiqTThAG7tRtciZ_8GwQzc545nKJ-w"
 };
-
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

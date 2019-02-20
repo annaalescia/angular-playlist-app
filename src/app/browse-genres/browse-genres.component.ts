@@ -14,6 +14,6 @@ export class BrowseGenresComponent implements OnInit {
   ngOnInit() {
     this.genresService
       .getGenres()
-      .subscribe(response => (this.genres = response.categories.items));
+      .subscribe(response => (this.genres = response.playlists.items));
   }
 }

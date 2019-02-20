@@ -1,12 +1,3 @@
 :host ::ng-deep ul {
   list-style-type: none;
 }
-
-:host ::ng-deep body {
-  margin: 0px;
-  height: 100%;
-}
-
-:host ::ng-deep .content-wrapper {
-  padding-left: 320px;
-}

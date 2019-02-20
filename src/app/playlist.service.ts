@@ -47,8 +47,20 @@ export class PlaylistService {
       .pipe(tap(response => console.log(response)));
   }
 
-  // private handleError(error: Response | any) {
-  //   console.error("ApiService::handleError", error);
-  //   return Observable.throw(error);
-  // }
+  public addTrack(trackURI, playlistId): Observable<any> {
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      Authorization: auth_token
+    });
+
+    return this.http
+      .post(
+        `${API_URL}/playlists/${playlistId}/tracks?uris=${trackURI}`,
+        null,
+        {
+          headers: headers
+        }
+      )
+      .pipe(tap(response => console.log(response)));
+  }
 }

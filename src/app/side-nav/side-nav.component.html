@@ -3,6 +3,9 @@
     <a routerLink="/" class="navigate-home-link"><mat-icon>home</mat-icon></a>
     <div class="user-profile-container" *ngIf="user">
       <h3>{{ user.display_name }}</h3>
+      <div class="profile-image-container">
+        <img src="../../assets/img/profile_spotify.jpg" />
+      </div>
     </div>
     <h3>Playlists</h3>
     <ul>

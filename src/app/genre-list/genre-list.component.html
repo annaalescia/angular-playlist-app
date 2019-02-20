@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+  <table mat-table [dataSource]="genreTracks" class="mat-elevation-z8">
+    <ng-container matColumnDef="Song">
+      <th mat-header-cell *matHeaderCellDef>Song Name</th>
+      <td mat-cell *matCellDef="let track">{{ track.track.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Artist">
+      <th mat-header-cell *matHeaderCellDef>Artist</th>
+      <td mat-cell *matCellDef="let track">
+        {{ track.track.artists[0].name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Album">
+      <th mat-header-cell *matHeaderCellDef>Album</th>
+      <td mat-cell *matCellDef="let track">{{ track.track.album.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Add">
+      <th mat-header-cell *matHeaderCellDef>Add to Playlist</th>
+      <td mat-cell *matCellDef="let track">
+        <button mat-icon-button>
+          <mat-icon
+            aria-label="Example icon-button with a add icon"
+            (click)="openDialog(track.track.name, track.track.uri)"
+            >add</mat-icon
+          >
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

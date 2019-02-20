@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { PlaylistService } from "../playlist.service";
-import { ThrowStmt } from "@angular/compiler";
 
 @Component({
   selector: "app-playlist",
@@ -32,7 +31,7 @@ export class PlaylistComponent implements OnInit {
   };
 
   deleteTrack = trackURI => {
-    let trackObj = { tracks: [{ uri: trackURI }] };
+    const trackObj = { tracks: [{ uri: trackURI }] };
     this.playlistService
       .deleteTrack(this.displayedPlaylist, trackObj)
       .subscribe(() => this.getTracks(this.displayedPlaylist));

@@ -19,8 +19,10 @@ export class GenresService {
       Authorization: auth_token
     });
     return this.http
-      .get(`${API_URL}/browse/categories`, { headers: headers })
-      .pipe(tap(response => response.categories.items));
+      .get(`${API_URL}/browse/categories/indie_alt/playlists`, {
+        headers: headers
+      })
+      .pipe(tap(response => console.log(response)));
   }
 
   // private handleError(error: Response | any) {

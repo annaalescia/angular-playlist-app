@@ -1,3 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "../src/variables.scss";
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+.content-wrapper {
+  padding-left: 320px;
+  padding-top: 1.5rem;
+  padding-right: 2rem;
+  background: $secondary-color;
+  min-height: 100vh;
+  .mat-table {
+    background: #ccc;
+  }
+}
